@@ -21,6 +21,7 @@ while 1:
         conn, address = soc.accept()
         #unpacker = struct.Struct()
         data = conn.recv(BUFF_SIZE)
+        data = data.decode('utf-8')
         print(data)
     except:
         print("Socket Accept Error")
